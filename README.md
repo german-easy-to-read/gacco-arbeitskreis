@@ -1,27 +1,50 @@
-# Minimal Mistakes remote theme starter
+# Arbeitskreis German Accessible Communication (GACCO)
 
-Click [**Use this template**](https://github.com/mmistakes/mm-github-pages-starter/generate) button above for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
+Website des Arbeitskreises, gebaut mit [Jekyll](https://jekyllrb.com/) und dem
+Remote-Theme [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes),
+gehostet über GitHub Pages.
 
-Contains basic configuration to get you a site with:
+## Struktur
 
-- Sample posts.
-- Sample top navigation.
-- Sample author sidebar with social links.
-- Sample footer links.
-- Paginated home page.
-- Archive pages for posts grouped by year, category, and tag.
-- Sample about page.
-- Sample 404 page.
-- Site wide search.
+| Pfad | Inhalt |
+| ---- | ------ |
+| `index.md` | Landingpage – hier stehen alle Inhalte zum Arbeitskreis |
+| `_pages/news.md` | Übersichtsseite aller Newsbeiträge (`/news/`) |
+| `_pages/404.md` | Fehlerseite |
+| `_posts/` | Die einzelnen Newsbeiträge |
+| `_data/navigation.yml` | Einträge der Hauptnavigation |
+| `_config.yml` | Titel, Beschreibung, Theme-Einstellungen |
+| `assets/images/` | Bilder (Logo, Fotos) |
 
-Replace sample content with your own and [configure as necessary](https://mmistakes.github.io/minimal-mistakes/docs/configuration/).
+## News hinzufügen
 
+Eine neue Datei in `_posts/` anlegen, benannt nach dem Schema
+`JJJJ-MM-TT-kurztitel.md`:
+
+```markdown
+---
+title: "Titel der Meldung"
+date: 2026-11-15 10:00:00 +0100
+excerpt: "Ein bis zwei Sätze für die Übersicht."
 ---
 
-## Troubleshooting
+Der Text der Meldung.
+```
 
-If you have a question about using Jekyll, start a discussion on the [Jekyll Forum](https://talk.jekyllrb.com/) or [StackOverflow](https://stackoverflow.com/questions/tagged/jekyll). Other resources:
+Beim Push nach `master` baut GitHub Pages die Seite automatisch neu.
 
-- [Ruby 101](https://jekyllrb.com/docs/ruby-101/)
-- [Setting up a Jekyll site with GitHub Pages](https://jekyllrb.com/docs/github-pages/)
-- [Configuring GitHub Metadata](https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration) to work properly when developing locally and avoid `No GitHub API authentication could be found. Some fields may be missing or have incorrect data.` warnings.
+## Lokal ansehen
+
+```bash
+bundle install
+bundle exec jekyll serve
+```
+
+Danach läuft die Seite unter <http://localhost:4000>.
+
+## Vor dem Livegang
+
+- In `_config.yml` `url` und – bei einer Project Page – `baseurl` eintragen.
+- E-Mail-Adresse in `_config.yml` (`email`, Footer-Link) ergänzen.
+- Platzhaltertexte in `index.md` ersetzen und den Beispielbeitrag in `_posts/`
+  löschen.
