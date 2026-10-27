@@ -7,6 +7,7 @@ description: >-
   Forschende und Praktiker:innen im Bereich der barrierefreien
   Kommunikation im deutschsprachigen Raum.
 locale: "de-DE"
+default_lang: "de"          # Standardsprache, siehe _data/i18n.yml
 # url: "https://<organisation>.github.io"   # ohne abschliessenden Slash
 # baseurl: "/gacco-arbeitskreis"            # nur noetig bei Project Pages
 minimal_mistakes_skin: default
@@ -34,9 +35,25 @@ footer:
   links:
     - label: "Kontakt"
       icon: "fas fa-fw fa-envelope"
-      url: "mailto:"
+      url: "mailto:yingqiang.gao@uzh.ch?cc=miriam.anschuetz@iued.uni-heidelberg.de,regina.stodden@uni-bielefeld.de,Thorben.Schomacker@haw-hamburg.de&subject=GACCO"
 
 defaults:
+  # Standardsprache fuer alle Inhalte
+  - scope:
+      path: ""
+    values:
+      lang: "de"
+  # Englische Inhalte liegen unter en/
+  - scope:
+      path: "en"
+    values:
+      lang: "en"
+      locale: "en-US"
+  - scope:
+      path: "en"
+      type: posts
+    values:
+      permalink: /en/news/:year/:title/
   # Newsbeitraege
   - scope:
       path: ""

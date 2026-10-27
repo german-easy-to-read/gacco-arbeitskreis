@@ -1,0 +1,59 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+@charset "utf-8";
+
+$max-width: 1400px;
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+/* Breiterer Textbereich: Ohne linke Sidebar (author_profile: false) reserviert
+   das Theme trotzdem Platz links. Diesen geben wir dem Inhalt zurück; rechts
+   bleibt Platz für das Inhaltsverzeichnis. */
+#main > .page:first-child,
+#main > .archive:first-child {
+  @include breakpoint($large) {
+    width: 100%;
+  }
+}
+
+/* Sprachumschalter oben rechts */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 0.75rem;
+  padding: 0;
+  list-style: none;
+  font-family: $sans-serif-narrow;
+  font-size: $type-size-5;
+  font-weight: bold;
+
+  li {
+    margin: 0;
+
+    & + li::before {
+      content: "|";
+      padding: 0 0.35em;
+      color: $border-color;
+    }
+  }
+
+  a {
+    color: $masthead-link-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $masthead-link-color-hover;
+      text-decoration: underline;
+    }
+  }
+}
+
+.lang-switch__current {
+  color: $text-color;
+  border-bottom: 2px solid currentColor;
+}

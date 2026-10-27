@@ -1,7 +1,15 @@
-main:
+# Hauptnavigation je Sprache (Schlüssel = `lang` der Seite)
+de:
   - title: "Start"
     url: /
   - title: "News"
     url: /news/
+  - title: "KlarText Workshop"
+    url: https://klar-text.github.io/
+en:
+  - title: "Home"
+    url: /en/
+  - title: "News"
+    url: /en/news/
   - title: "KlarText Workshop"
     url: https://klar-text.github.io/

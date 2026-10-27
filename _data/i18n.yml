@@ -1,0 +1,10 @@
+# Sprachen der Website. Die erste ist die Standardsprache (siehe
+# `default_lang` in _config.yml).
+de:
+  name: "Deutsch"
+  home: /
+  language_label: "Sprache wählen"
+en:
+  name: "English"
+  home: /en/
+  language_label: "Choose language"

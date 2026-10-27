@@ -11,8 +11,12 @@ gehostet über GitHub Pages.
 | `index.md` | Landingpage – hier stehen alle Inhalte zum Arbeitskreis |
 | `_pages/news.md` | Übersichtsseite aller Newsbeiträge (`/news/`) |
 | `_pages/404.md` | Fehlerseite |
-| `_posts/` | Die einzelnen Newsbeiträge |
-| `_data/navigation.yml` | Einträge der Hauptnavigation |
+| `_posts/` | Die einzelnen Newsbeiträge (Deutsch) |
+| `en/` | Englische Version: `index.md`, `news.md`, `_posts/` (unter `/en/`) |
+| `_data/navigation.yml` | Einträge der Hauptnavigation, je Sprache |
+| `_data/i18n.yml` | Sprachen und Startseiten für den Sprachumschalter |
+| `_includes/`, `_layouts/` | Angepasste Theme-Dateien (Navigation mit Sprachumschalter, sprachgefilterte Newsliste) |
+| `assets/css/main.scss` | Eigene Styles (Breite des Textbereichs, Sprachumschalter) |
 | `_config.yml` | Titel, Beschreibung, Theme-Einstellungen |
 | `assets/images/` | Bilder (Logo, Fotos) |
 
@@ -30,6 +34,19 @@ excerpt: "Ein bis zwei Sätze für die Übersicht."
 
 Der Text der Meldung.
 ```
+
+## Zweisprachigkeit (Deutsch/Englisch)
+
+Deutsch ist die Standardsprache und liegt unter `/`, Englisch unter `/en/`.
+Alles im Ordner `en/` wird automatisch als Englisch markiert.
+
+Damit der Sprachumschalter oben rechts direkt auf die Übersetzung einer Seite
+springt, bekommen beide Fassungen im Front Matter denselben `ref`-Wert, z. B.
+`ref: website-online`. Fehlt eine Übersetzung, führt der Umschalter auf die
+Startseite der anderen Sprache.
+
+Englische News kommen nach `en/_posts/` (gleiches Dateischema wie oben) und
+erscheinen unter `/en/news/`.
 
 Beim Push nach `master` baut GitHub Pages die Seite automatisch neu.
 

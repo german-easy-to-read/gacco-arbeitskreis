@@ -1,0 +1,23 @@
+{% comment %}
+  Sprachumschalter: verlinkt auf die Übersetzung der aktuellen Seite
+  (gleicher `ref`-Wert im Front Matter) oder – falls keine existiert –
+  auf die Startseite der anderen Sprache.
+{% endcomment %}
+{% assign current_lang = page.lang | default: site.default_lang %}
+{% assign translatable = site.pages | concat: site.posts %}
+<ul class="lang-switch" aria-label="{{ site.data.i18n[current_lang].language_label }}">
+  {% for language in site.data.i18n %}
+    {% assign code = language[0] %}
+    {% assign info = language[1] %}
+    {% if code == current_lang %}
+      <li><span class="lang-switch__current" aria-current="true" title="{{ info.name }}">{{ code | upcase }}</span></li>
+    {% else %}
+      {% assign target_url = info.home %}
+      {% if page.ref %}
+        {% assign translation = translatable | where: "ref", page.ref | where: "lang", code | first %}
+        {% if translation %}{% assign target_url = translation.url %}{% endif %}
+      {% endif %}
+      <li><a href="{{ target_url | relative_url }}" hreflang="{{ code }}" lang="{{ code }}" title="{{ info.name }}">{{ code | upcase }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>
