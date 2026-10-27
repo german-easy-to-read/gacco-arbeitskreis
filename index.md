@@ -12,6 +12,8 @@ toc_sticky: true
 
 Unser Arbeitskreis beschäftigt sich mit allen Formen der barrierefreien Kommunikation im Deutschen, bspw. Leichter und Einfache Sprache, und versucht deren Sichtbarkeit in der Deutschen Forschung zu stärken.
 
+Wir werden in unserer Arbeit von der [https://gscl.org/](Gesellschaft für Sprachtechnology und Computerlinguistik (GSCL)) unterstützt.
+
 
 ## Ziele
 
@@ -34,7 +36,7 @@ Unser Arbeitskreis beschäftigt sich mit allen Formen der barrierefreien Kommuni
 
 ## Kontakt
 
-Du hast Interesse an unserem Arbeitskreis oder eine Frage? Dann ["mailto:yingqiang.gao@uzh.ch?cc=miriam.anschuetz@iued.uni-heidelberg.de.de,regina.stodden@uni-bielefeld.de,Thorben.Schomacker@haw-hamburg.de&subject=GACCO"](melde dich beim Orga-Team)!
+Du hast Interesse an unserem Arbeitskreis oder eine Frage? Dann [melde dich beim Orga-Team]("mailto:yingqiang.gao@uzh.ch?cc=miriam.anschuetz@iued.uni-heidelberg.de.de,regina.stodden@uni-bielefeld.de,Thorben.Schomacker@haw-hamburg.de&subject=GACCO")!
 
 ## Aktuelles
 

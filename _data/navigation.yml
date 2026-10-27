@@ -3,3 +3,5 @@ main:
     url: /
   - title: "News"
     url: /news/
+  - title: "KlarText Workshop"
+    url: https://klar-text.github.io/
